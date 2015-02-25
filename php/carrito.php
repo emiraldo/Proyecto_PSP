@@ -3,9 +3,9 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/Base.js"></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/Base.js"></script>
+	<script type="text/javascript" src="../js/jquery.js"></script>
 	<title>Carrito Cliente</title>	
 </head><!--termina head de la pagina index-->
 <nav>
@@ -37,8 +37,17 @@
 						if($resultado1 = $mysqli->query($consulta1)){						
 							$fila1 = $resultado1-> fetch_assoc();
 							echo "
-					  		<h1>".$fila1["Nombre"]."</h1>
-					  		<h1>".$fila["cantidad"]."</h1>
+							<article class='productoCarrito'>
+					  			<header>
+									<DIV ALIGN=left>".$fila1["Nombre"]."</div>
+								</header>
+					  			<img src='../".$fila1["Imagen"]."' width='100' heigth='100'></img>
+					  			<p id='Descipcion'>Descipcion: ".$fila1["Descripcion"]."</p>
+					  			<p>Cantidad a prestar: ".$fila["cantidad"]."</p>
+								<label name='agregar3'>Tiempo del prestamo (dias) :</label>
+								<input type='text' id='tiempo".$fila1["Id_Juego"]."' size='1' maxlength='2' ></input>
+								<button type='button' id='BTiempo".$fila1["Id_Juego"]."' onclick='AgregarTiempoCarrito(".$fila1["Id_Juego"].")' >Ok</button>					  		
+							</article>
 							";	
 						}
 			}
@@ -48,11 +57,29 @@
 	
 
 		?>
+		<article id="Formulario">
+
+		</article>
 
 	</section><!--Termina secction -->
 
 	<aside>
 		<!--Aside sin usar pero declarado -->
+		<header><h1>Registrar datos :</h1></header>
+			<label name='Nombre' >Nombre :</label>
+			<input type='text' id="TNombre" size='10' ></input>
+			<br>
+			<label name='Apellido'>Apellido :</label>
+			<input type='text' id="TApellido" size='10' ></input>
+			<br>
+			<label name='Cedula'>Cedula :</label>
+			<input type='text' id="TCedula" size='10' ></input>
+			<br>
+			<label name='Telefomno'>Telefono :</label>
+			<input type='text' id="TTelefono" size='10' ></input>
+			<br>
+			<button type="button" id="BRegistrar" onclick="AgregarCliente()" >Registrar Prestamo</button>
+			<button type="button" id="BCancelar" onclick="" >Cancelar Prestamo</button>
 	</aside><!--Termina aside-->
 
 	<footer>

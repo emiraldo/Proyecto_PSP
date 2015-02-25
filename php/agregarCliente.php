@@ -1,4 +1,4 @@
-<?php 
+<?php  
  
 	$mysqli= new mysqli("localhost","root","", "catalogo");
 	$nombre="";

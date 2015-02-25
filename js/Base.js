@@ -1,4 +1,4 @@
-function AgregarCarrito(IdJuego){
+function AgregarCarrito(IdJuego){  
 	var Idjuego=IdJuego;
 	var cantidad = document.getElementById("cantidad"+IdJuego);
 	cantidad=cantidad.value;	

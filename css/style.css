@@ -1,39 +1,64 @@
 body{
 	margin: 0 auto;
 	height: 50%;
-	width: 80%;
-	border :1px solid black; 
-	/*background: red;*/
+	width: 80%;	
+	background: rgb(228,228,228);
 }
 section{
+	font: bold 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	size:1em;
 	overflow: scroll;
 	float: left;
 	height: 700px;
 	width: 80%;
-	border: 1px solid red;
+	border-top-style: ridge;
+	border-right-style: ridge;
+	border-left-style: ridge;
+	border-bottom-style: ridge;
 	margin-top: 3%;
+	/*background: rgb(228,228,228);*/
+}
+
+#Titulo{
+	font: bold 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	size:1em;
+	border :1px solid black; 
+	margin-top: 1%;
+}
+
+#todo{
+	font: bold 1em "Trebuchet MS", Arial, Helvetica, sans-serif;
+	size:1em;
 }
 
 .producto{
+
 	margin-right: 3%;
 	margin-left: 3%;
 	margin-top: 3%;
 	margin-bottom: 3%;
 	float: left;
-	height: 30%;
-	width: 25%;
-	border: 1px solid black;
+	height: 35%;
+	width: 95%;
+	border-style: 1px ridge black;
 }
+
 .productoCarrito {
-	margin-right: 10%;
+	margin-right: 3%;
 	margin-left: 3%;
 	margin-top: 3%;
 	margin-bottom: 3%;
 	float: left;
 	height: 40%;
 	width: 90%;
-	border: 1px solid black;
+	border-style: 1px ridge black;
 }
+
+
+#tabla{
+	border-style: inset;
+}
+
 
 #imgProductoCarrito{
 
@@ -46,10 +71,6 @@ section{
 }
 #imgProducto{
 	margin-left: 25%;
-}
-
-#Carrito{
-	margin-left: 60%;
 }
 
 #labelJuegos {

@@ -13,7 +13,7 @@
 </nav>
 
 <body>
-	<header>
+	<header id="Titulo">
 		<h1>Prestamo de VideoJuegos</h1>
 	</header><!--Termina header del body-->
 	<section >
@@ -37,17 +37,32 @@
 						if($resultado1 = $mysqli->query($consulta1)){						
 							$fila1 = $resultado1-> fetch_assoc();
 							echo "
+							<article><hr></hr></article>
 							<article class='productoCarrito'>
 					  			<header>
 									<DIV ALIGN=left>".$fila1["Nombre"]."</div>
 								</header>
-					  			<img src='../".$fila1["Imagen"]."' width='100' heigth='100'></img>
-					  			<p id='Descipcion'>Descipcion: ".$fila1["Descripcion"]."</p>
-					  			<p>Cantidad a prestar: ".$fila["cantidad"]."</p>
-								<label name='agregar3'>Tiempo del prestamo (dias) :</label>
-								<input type='text' id='tiempo".$fila1["Id_Juego"]."' size='1' maxlength='2' ></input>
-								<button type='button' id='BTiempo".$fila1["Id_Juego"]."' onclick='AgregarTiempoCarrito(".$fila1["Id_Juego"].")' >Ok</button>					  		
+								<table id='tabla'>
+									<tr>
+										<td>
+					  						<img src='../".$fila1["Imagen"]."' width='100' heigth='100'></img>
+					  					</td>
+					  					<td>
+					  						<p id='Descipcion'>Descipcion: ".$fila1["Descripcion"]."</p>
+					  					</td>
+					  				</tr>
+									<tr>
+										<td></td>
+										<td>
+					  						<p>Cantidad a prestar: ".$fila["cantidad"]."</p>
+											<label name='agregar3'>Tiempo del prestamo (dias) :</label>
+											<input type='text' id='tiempo".$fila1["Id_Juego"]."' size='1' maxlength='2' ></input>
+											<button type='button' id='BTiempo".$fila1["Id_Juego"]."' onclick='AgregarTiempoCarrito(".$fila1["Id_Juego"].")' >Ok</button>					  		
+										</td>
+									</tr>
+								</table>
 							</article>
+							<article><hr></hr></article>
 							";	
 						}
 			}

@@ -14,7 +14,7 @@
 
 <body>
 	<header id="Titulo">
-		<h1>Prestamo de VideoJuegos</h1>
+		<img src="img/BANNER.png" id="Banner" >
 	</header><!--Termina header del body-->
 	<section id="Juegos">
 		<header >
@@ -90,7 +90,7 @@
 	</aside><!--Termina aside-->
 
 	<footer>
-		<p>Footer</p>
+		<img src="img/FOOTER.png"  >
 	</footer><!--Termina Footer -->
 </body><!--termina body de la pagina index-->
 

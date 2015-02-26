@@ -14,11 +14,11 @@
 
 <body>
 	<header id="Titulo">
-		<h1>Prestamo de VideoJuegos</h1>
+		<img src="../img/BANNER.png" id="Banner" >
 	</header><!--Termina header del body-->
 	<section >
 		<header >
-			<h1>Carrito Cliente: </h1>
+			<h1 id="TituloCarrito">Carrito Cliente: </h1>
 		</header>
 		<?php
 			$mysqli= new mysqli("localhost","root","", "catalogo");
@@ -81,23 +81,29 @@
 	<aside>
 		<!--Aside sin usar pero declarado -->
 		<header><h1>Registrar datos :</h1></header>
-			<label name='Nombre' >Nombre :</label>
-			<input type='text' id="TNombre" size='10' ></input>
-			<br>
-			<label name='Apellido'>Apellido :</label>
-			<input type='text' id="TApellido" size='10' ></input>
-			<br>
-			<label name='Cedula'>Cedula :</label>
-			<input type='text' id="TCedula" size='10' ></input>
-			<br>
-			<label name='Telefomno'>Telefono :</label>
-			<input type='text' id="TTelefono" size='10' ></input>
-			<br>
-			<button type="button" id="BRegistrar" onclick="AgregarCliente()" >Registrar Prestamo</button>
-			<button type="button" id="BCancelar" onclick="" >Cancelar Prestamo</button>
+		<table >	
+			<tr>
+				<td>
+					<label name='Nombre' >Nombre</label>	
+					<label name='Apellido'>Apellido</label>
+					<label name='Cedula'>Cedula</label>	
+					<label name='Telefomno'>Telefono</label>
+				</td>
+				<td>
+					<input type='text' id="TNombre" size='10' ></input>			
+					<input type='text' id="TApellido" size='10' ></input>			
+					<input type='text' id="TCedula" size='10' ></input>
+					<input type='text' id="TTelefono" size='10' ></input>
+				</td>
+
+			</tr>
+		</table>
+		<button type="button" id="BRegistrar" onclick="AgregarCliente()" >Registrar</button>
+		<button type="button" id="BCancelar" onclick="" >Cancelar</button>
 	</aside><!--Termina aside-->
 
 	<footer>
+		<img src="../img/FOOTER.png"  >
 	</footer><!--Termina Footer -->
 </body><!--termina body de la pagina index-->
 

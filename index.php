@@ -85,8 +85,16 @@
 
 	</section><!--Termina secction -->
 
-	<aside>
-		<!--Aside sin usar pero declarado -->
+	<aside id="asideIndex">
+		<script type="text/javascript" src="http://www.24webclock.com/clock24.js"></script> 
+		<table border="0" bgcolor="#3D700B" cellspacing=1 cellpadding=3 class="clock24st" style="line-height:14px; padding:0;"> 
+		<tr><td bgcolor="#88ED23" class="clock24std" style="font-family:arial; font-size:12px;"><a href="http://www.24webclock.com/de/"><img src="http://www.24webclock.com/ico.gif" width="14" height="14" border="0" alt="gratis uhren für homepage" align="left" hspace="2"></a> <a href="http://www.24webclock.com/es/" style="text-decoration:none;"><span class="clock24s" id="clock24_48434" style="color:#3D700B;">relojes web</span></a></td></tr> 
+		</table> 
+		<script type="text/javascript"> 
+		var clock24_48434 = new clock24('48434',-180,'%M / %dd / %yyyy %W %HH:%nn:%ss %P','es'); 
+		clock24_48434.daylight('AR'); clock24_48434.refresh(); 
+		</script> 
+		
 	</aside><!--Termina aside-->
 
 	<footer>

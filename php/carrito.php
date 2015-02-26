@@ -69,7 +69,18 @@
 		$resultado->free();
 		}
 		$mysqli->close();
-	
+		function eliminarCarrito(){
+			$mysqli= new mysqli("localhost","root","", "catalogo");
+			$consulta3="Delete from Carrito";
+			if($resultado3=$mysqli->query($consulta3)){
+			
+			}else{
+				echo json_encode(array("respuesta"=>false));
+			}
+		/* cerrar conexion */
+		$mysqli -> close();
+		echo "location.href='../index.php'";
+		}
 
 		?>
 		<article id="Formulario">
@@ -78,7 +89,7 @@
 
 	</section><!--Termina secction -->
 
-	<aside>
+	<aside id="asideCarrito">
 		<!--Aside sin usar pero declarado -->
 		<header><h1>Registrar datos :</h1></header>
 		<table >	
@@ -99,7 +110,7 @@
 			</tr>
 		</table>
 		<button type="button" id="BRegistrar" onclick="AgregarCliente()" >Registrar</button>
-		<button type="button" id="BCancelar" onclick="" >Cancelar</button>
+		<button type="button" id="BCancelar" onclick="<?php eliminarCarrito(); ?>" >Cancelar</button>
 	</aside><!--Termina aside-->
 
 	<footer>

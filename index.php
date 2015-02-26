@@ -86,15 +86,50 @@
 	</section><!--Termina secction -->
 
 	<aside id="asideIndex">
-		<script type="text/javascript" src="http://www.24webclock.com/clock24.js"></script> 
-		<table border="0" bgcolor="#3D700B" cellspacing=1 cellpadding=3 class="clock24st" style="line-height:14px; padding:0;"> 
-		<tr><td bgcolor="#88ED23" class="clock24std" style="font-family:arial; font-size:12px;"><a href="http://www.24webclock.com/de/"><img src="http://www.24webclock.com/ico.gif" width="14" height="14" border="0" alt="gratis uhren für homepage" align="left" hspace="2"></a> <a href="http://www.24webclock.com/es/" style="text-decoration:none;"><span class="clock24s" id="clock24_48434" style="color:#3D700B;">relojes web</span></a></td></tr> 
-		</table> 
-		<script type="text/javascript"> 
-		var clock24_48434 = new clock24('48434',-180,'%M / %dd / %yyyy %W %HH:%nn:%ss %P','es'); 
-		clock24_48434.daylight('AR'); clock24_48434.refresh(); 
-		</script> 
-		
+		<table border="0" cellpadding="0">
+  		<tr>
+    		<td width="100%"><img src="img/log.jpg" width="240" height="160" name="photoslider"></td>
+  		</tr>
+  		<tr>
+    		<td width="100%"><form method="POST" name="rotater">
+      			<div align="center"><center><p><!--webbot bot="HTMLMarkup" startspan --><script language="JavaScript1.1">
+				var photos=new Array()
+				var which=0
+
+				photos[0]="img/COD.jpg"
+				photos[1]="img/GTAV.jpg"
+				photos[2]="img/L4D2.jpg"
+				photos[3]="img/CODG.jpg"
+				photos[4]="img/FC4.jpg"
+				photos[5]="img/GOW3.jpg"
+				photos[6]="img/PES2015.jpg"
+				photos[6]="img/FIFA15.jpg"
+
+				function backward(){
+					if (which>0){
+						window.status=''
+						which--
+						document.images.photoslider.src=photos[which]
+					}
+				}
+
+				function forward(){
+					if (which<photos.length-1){
+						which++
+						document.images.photoslider.src=photos[which]
+					}
+					else window.status='End of gallery'
+					}
+					</script><!--webbot
+      				bot="HTMLMarkup" endspan --><input type="button" value="<<Back" name="B2"
+      				onClick="backward()"> <input type="button" value="Next>>" name="B1"
+      				onClick="forward()"><br>
+      				</p>
+      				</center></div>
+    			</form>
+    		</td>
+  		</tr>
+	</table>
 	</aside><!--Termina aside-->
 
 	<footer>

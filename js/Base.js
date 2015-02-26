@@ -3,7 +3,6 @@ function AgregarCarrito(IdJuego){
 	var cantidad = document.getElementById("cantidad"+IdJuego);
 	cantidad=cantidad.value;	
 	document.getElementById("cantidad"+IdJuego).value=""
-
 	$.ajax({
 		url:"php/agregarCarrito.php",
 		type:"get",
